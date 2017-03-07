@@ -1,11 +1,29 @@
-body{
-  background-color: green
-}
+@import "secondList";
 
+
+$color: green;
+$size: 40%;
+
+body{
+  background-color: $color;
+  color: $color * 2;
+}
 
 .first{
+
+
+
   float: left;
-}
-.second {
-  float: right;
+  h2{
+    color: magenta;
+    text-decoration-color: blue;
+    font-size: $size + 10;
+  }
+  li{
+    color: tomato;
+    &:hover{
+      text-decoration: underline;
+    @extend h2;
+    }
+  }
 }
